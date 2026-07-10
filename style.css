@@ -1,0 +1,159 @@
+/* Music Player Styles, align player and playlist side by side */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  color: #fff;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 20px;
+  background-color: #1e1e2f;
+}
+/* styles for the player */
+.player {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+/*album art styles to be perfect square box inside the player*/
+#cover {
+  width: 100%;
+  height: 280px;
+  max-width: 280px;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* song info */
+h2 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+/* controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.controls button {
+  background: #00ffcc;
+  border: none;
+  padding: 12px 15px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background: #00cca3;
+  transform: scale(1.1);
+}
+/* progress bar */
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: #444;
+  border-radius: 5px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.progress {
+  width: 0%;
+  height: 100%;
+  background: #00ffcc;
+  border-radius: 5px;
+}
+/* time display */
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* volume control */
+.volume {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* styles for the playlist on the right */
+.playlist-container {
+  width: 35%;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+/* playlist title */
+.playlist-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #00ffcc;
+}
+/* playlist items */
+.playlist-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playlist-container li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/* hover effect */
+.playlist-container li:hover {
+  background: #00ffcc;
+  color: #000;
+  transform: translateX(5px);
+}
+
+/* active song highlight */
+.playlist-container li.active {
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
+  transform: translateX(5px);
+}
